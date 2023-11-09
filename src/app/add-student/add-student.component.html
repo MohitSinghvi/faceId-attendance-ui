@@ -1,0 +1,102 @@
+
+
+
+<h2 class="p-2 m-5">Register Student <i class="bi bi-person"></i></h2>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="m-5 needs-validation p-2 w-50" novalidate>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">Name</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" formControlName="name" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Roll No</label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="016888079" formControlName="rollNo" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <label for="validationCustom02">Course</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Computer Science" formControlName="course" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+    </div>
+
+    <!-- <div class="col-md-4 mb-3">
+        <label for="validationCustom02">DOB</label>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+    </div> -->
+    <!-- <div class="col-md-4 mb-3">
+      <label for="validationCustomUsername">Username</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend"></span>
+        </div>
+        <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <label class="form-check-label" for="invalidCheck">
+    Register Face
+  </label>
+  <br>
+  <button
+  type="button"
+  class="btn btn-light p-2 m-2" 
+  (click)="openPopup()"><i class="bi bi-camera-fill"></i> Capture Face
+</button> 
+<br>
+<br>
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}"
+  *ngIf="openCameraPopup"
+  > 
+  <div class="modal-dialog" role="document"> 
+    
+    <div class="modal-content"> 
+        <button type="button" class="btn-close p-1 m-1" style = "align-self: end;" aria-label="Close" (click)="closePopup()"></button>
+      <div class="modal-header" style = "align-self: center;"> 
+        <h4 class="modal-title">Register FaceId</h4> 
+      </div> 
+      <div class="modal-body" style = "align-self: center;"> 
+        <app-camera *ngIf="!imageTaken" (pictureTaken)="handleImage($event)"></app-camera>
+        <img style="width:324px;" [src]="webcamImage?.imageAsDataUrl" />
+        
+      </div> 
+      <div *ngIf="imageTaken" class="modal-footer"> 
+        <button *ngIf="imageTaken" type="button" class="btn btn-primary" (click)="saveImage()">Save</button>
+        <button *ngIf="imageTaken" type="button" class="btn btn-light" 
+                (click)="clearImage()"> 
+          Clear 
+        </button> 
+
+      </div> 
+    </div> 
+  </div> 
+</div > 
+<div>
+    <button class="btn btn-light p-2 m-2" type="submit">Clear</button>
+    <button class="btn btn-primary p-2 m-2" type="submit">Submit</button>
+</div>
+  
+</form>
+
+<!-- <hr />  -->
+
+
+
+
