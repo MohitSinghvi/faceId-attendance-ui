@@ -13,7 +13,7 @@
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Roll No</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="016888079" formControlName="rollNo" required>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Roll NO" value="016888079" formControlName="rollNo" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -21,7 +21,7 @@
 
     <div class="col-md-4 mb-3">
         <label for="validationCustom02">Course</label>
-        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Computer Science" formControlName="course" required>
+        <input type="text" class="form-control" id="validationCustom02" placeholder="Course" value="Computer Science" formControlName="course" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -50,15 +50,15 @@
   <label class="form-check-label" for="invalidCheck">
     Register Face
   </label>
-  <br>
+  <!-- <br>
   <button
   type="button"
   class="btn btn-light p-2 m-2" 
   (click)="openPopup()"><i class="bi bi-camera-fill"></i> Capture Face
-</button> 
+</button>  -->
 <br>
 <br>
-<div
+<!-- <div
   class="modal"
   tabindex="-1"
   role="dialog"
@@ -87,7 +87,13 @@
       </div> 
     </div> 
   </div> 
-</div > 
+</div >  -->
+
+
+<app-camera-popup (imageClear)="clearImage()" (imageSave)="saveImage($event)" [heading]="'Register FaceId'"> 
+
+</app-camera-popup>
+
 <div>
     <button class="btn btn-light p-2 m-2" type="submit">Clear</button>
     <button class="btn btn-primary p-2 m-2" type="submit">Submit</button>

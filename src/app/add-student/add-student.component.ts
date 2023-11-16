@@ -1,6 +1,7 @@
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { WebcamImage } from 'ngx-webcam';
 import { FormGroup, FormControl } from '@angular/forms';
+import { AttendanceService } from '../attendance.service';
 
 @Component({
   selector: 'app-add-student',
@@ -8,7 +9,6 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./add-student.component.scss']
 })
 export class AddStudentComponent {
-  @ViewChild('exampleModal') modal: ElementRef;
   displayStyle = "block"; 
   openCameraPopup = false;
   imageTaken = false;
@@ -17,17 +17,20 @@ export class AddStudentComponent {
   name="";
   profileForm = new FormGroup({
     name: new FormControl(''),
-    rollno: new FormControl(''),
+    rollNo: new FormControl(''),
     course: new FormControl(''),
     image: new FormControl()
   });
 
-  constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
   public webcamImage: WebcamImage|null = null;
   showCameraModal: boolean = true;
   handleImage(webcamImage: WebcamImage) {
     this.webcamImage = webcamImage;
     this.imageTaken = true;
+  }
+
+  constructor(private attendanceService: AttendanceService){
+  
   }
 
   
@@ -43,12 +46,13 @@ export class AddStudentComponent {
   } 
 
   clearImage() {
-    this.webcamImage = null;
-    this.imageTaken = false;
+    // this.webcamImage = null;
+    // this.imageTaken = false;
+
   }
-  saveImage(){
-    this.openCameraPopup = false;
-    this.profileForm.get('image')?.setValue(this.webcamImage);
+  saveImage(image: any){
+    this.profileForm.get('image')?.setValue(image._imageAsDataUrl.split(",")[1]);
+    console.log(image);
   }
 
   retry() {
@@ -57,6 +61,17 @@ export class AddStudentComponent {
   
   onSubmit() {
     console.log(this.profileForm?.value);
+    this.attendanceService.addStudent(this.profileForm?.value).subscribe(
+      (result)=>{
+        console.log(result);
+        alert("Student Added Successfully!");
+      },
+      (error)=>{
+        console.log(error);
+        alert("Student Not Added!");
+      }
+    )
+
   }
 
 }

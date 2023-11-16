@@ -1,0 +1,39 @@
+
+<button
+type="button"
+class="btn btn-light p-2 m-2" 
+(click)="openPopup()"><i class="bi bi-camera-fill"></i> Capture Face
+</button> 
+<br>
+<br>
+<div
+class="modal"
+tabindex="-1"
+role="dialog"
+[ngStyle]="{'display':'block'}"
+*ngIf="openCameraPopup"
+> 
+<div class="modal-dialog" role="document"> 
+  
+  <div class="modal-content"> 
+      <button type="button" class="btn-close p-1 m-1" style = "align-self: end;" aria-label="Close" (click)="closePopup()"></button>
+    <div class="modal-header" style = "align-self: center;"> 
+      <!-- <h4 class="modal-title">Register FaceId</h4>  -->
+      <h4 class="modal-title">{{heading}}</h4> 
+    </div> 
+    <div class="modal-body" style = "align-self: center;"> 
+      <app-camera *ngIf="!imageTaken" (pictureTaken)="handleImage($event)"></app-camera>
+      <img style="width:324px;" [src]="webcamImage?.imageAsDataUrl" />
+      
+    </div> 
+    <div *ngIf="imageTaken" class="modal-footer"> 
+      <button *ngIf="imageTaken" type="button" class="btn btn-primary" (click)="saveImage()">Save</button>
+      <button *ngIf="imageTaken" type="button" class="btn btn-light" 
+              (click)="clearImage()"> 
+        Clear 
+      </button> 
+
+    </div> 
+  </div> 
+</div> 
+</div > 
