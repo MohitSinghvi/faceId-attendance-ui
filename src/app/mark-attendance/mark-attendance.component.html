@@ -1,1 +1,73 @@
-<app-camera-popup (imageClear)="clearImage()" (imageSave)="saveImage($event)"></app-camera-popup>
+<h4 class="p-2 m-2 text-muted"> Mark your attendance 
+    <!-- <button style="background-color: var(--main-color) !important; color: white;float: right;" class="btn btn-light p-2 m-2" type="submit">End Session</button>  -->
+</h4> 
+
+
+<app-camera-popup class="p-2 m-2" (imageClear)="clearImage()" (imageSave)="saveImage($event)"></app-camera-popup>
+
+
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button  class="nav-link active" id="nav-attendees-tab" data-bs-toggle="tab" data-bs-target="#nav-attendees"
+            type="button" role="tab" aria-controls="nav-attendees" aria-selected="true">Attendees</button>
+        <button class="nav-link" id="nav-enrolled-tab" data-bs-toggle="tab" data-bs-target="#nav-enrolled" type="button"
+            role="tab" aria-controls="nav-enrolled" aria-selected="false">Enrolled Students</button>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-attendees" role="tabpanel" aria-labelledby="nav-attendees-tab">
+
+        <!-- <h4 class="p-2 m-2"> Attendees </h4> -->
+        <!-- <ul class="list-group" *ngFor="let attendee of attendees">
+            <li class="list-group-item" style = "border-bottom: 1px solid var(--main-color)"> {{attendee.rollNo}} - {{attendee.name}}</li>
+        </ul> -->
+
+        <table class="table table-striped p-3 m-3">
+            <thead>
+              <tr>
+                <th scope="col">Roll No</th>
+                <th scope="col">Name</th>
+          
+              </tr>
+            </thead>
+            <tbody>
+              <ng-container *ngFor="let student of attendees">
+                <tr>
+          
+                  <th scope="row">{{student.rollNo}}
+                    
+                    </th>
+                  <td>{{student.studentName}}</td>
+          
+              </ng-container>
+            </tbody>
+          </table>
+
+
+    </div>
+    <div class="tab-pane fade" id="nav-enrolled" role="tabpanel" aria-labelledby="nav-enrolled-tab">
+
+        <table class="table table-striped p-3 m-3">
+            <thead>
+              <tr>
+                <th scope="col">Roll No</th>
+                <th scope="col">Name</th>
+          
+              </tr>
+            </thead>
+            <tbody>
+              <ng-container *ngFor="let student of enrolled">
+                <tr>
+          
+                  <th scope="row">{{student.rollNo}}
+                    </th>
+                  <td>{{student.studentName}}</td>
+          
+              </ng-container>
+            </tbody>
+          </table>
+
+    </div>
+
+
+</div>

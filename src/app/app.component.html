@@ -5,14 +5,29 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="/dashboard">Dashboard</a>
-        <a class="nav-item nav-link active" href="/courses">Courses</a>
-        <a class="nav-item nav-link active" href="/sessions">Sessions</a>
-        <a class="nav-item nav-link active" href="/employees">Students</a>
-        <a class="nav-item nav-link" href="#">Logout</a>
+      <div class="navbar-nav w-100">
+        <a class="nav-item nav-link active" *ngIf="localStorage.getItem('role')=='Student'" href="/dashboard">Dashboard</a>
+        <a class="nav-item nav-link active" *ngIf="localStorage.getItem('role') && localStorage.getItem('role')!='Student'" href="/courses">Courses</a>
+        <a class="nav-item nav-link active" *ngIf="localStorage.getItem('role')=='Admin'" href="/professors">Professors</a>
+        <!-- <a class="nav-item nav-link active" href="/sessions">Sessions</a> -->
+        <a class="nav-item nav-link active" *ngIf="localStorage.getItem('role')=='Admin'" href="/students">Students</a>
+        <a class="nav-item nav-link" *ngIf="!userId" href="/login">Login</a>
+        <!-- <a class="nav-item nav-link" href="#">Logout</a> -->
         <!-- <a class="nav-item nav-link" href="#">Pricing</a>
         <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+
+        <div *ngIf="userId" class=" w-100">
+          <div ngbDropdown class="d-inline-block dropstart" style="float: right;">
+            <button *ngIf="userId" type="button" class="btn text-white" id="dropdownBasic1" ngbDropdownToggle>
+              <i class="bi bi-person"></i>  </button> 
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropstart">
+              <button ngbDropdownItem href="/">{{localStorage.getItem('email')}}</button>
+              <button ngbDropdownItem (click)="logout()">Logout</button>
+            </div>
+          </div>
+      </div>
+
+
       </div>
     </div>
     

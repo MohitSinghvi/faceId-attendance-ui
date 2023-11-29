@@ -1,0 +1,26 @@
+<table class="table table-striped p-3 m-3">
+    <thead>
+      <tr>
+        <th scope="col">Course No</th>
+        <th scope="col">Course Name</th>
+        <th scope="col">Attendance %</th>
+        <!-- <th>Actions</th> -->
+  
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let course of courses; index as i">
+        <tr>
+  
+
+          <th scope="row">{{course.courseId}}</th>
+          <td>{{course.courseName}}</td>
+          <td>{{course.percentageAttendance}}%</td>
+
+          <td>
+          </td>
+        </tr>
+  
+      </ng-container>
+    </tbody>
+  </table>

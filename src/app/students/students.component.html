@@ -1,0 +1,35 @@
+
+<h3 class="p-3 m-2" style="float: left;"> <i class="bi bi-person-circle m-1 p-1 "></i> Students</h3>
+<button type="button" class="btn btn-light m-3"
+  style="float: right; background-color: var(--main-color) !important; color: white" [routerLink]="'/addStudent'">Add
+  New</button>
+
+<table class="table table-striped p-3 m-3">
+    <thead>
+      <tr>
+        <th scope="col">Roll No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Major</th>
+        <th scope="col">Term</th>
+        <!-- <th>Actions</th> -->
+  
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of list; ; index as i">
+        <tr>
+  
+
+          <th scope="row">{{item.rollNo}}</th>
+          <td>{{item.name}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.course}}</td>
+          <td>{{item.batch}}</td>
+          <td>
+          </td>
+        </tr>
+  
+      </ng-container>
+    </tbody>
+  </table>

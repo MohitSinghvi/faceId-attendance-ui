@@ -2,6 +2,7 @@ import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { WebcamImage } from 'ngx-webcam';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AttendanceService } from '../attendance.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-student',
@@ -19,6 +20,8 @@ export class AddStudentComponent {
     name: new FormControl(''),
     rollNo: new FormControl(''),
     course: new FormControl(''),
+    batch: new FormControl(''),
+    email: new FormControl(''),
     image: new FormControl()
   });
 
@@ -29,7 +32,7 @@ export class AddStudentComponent {
     this.imageTaken = true;
   }
 
-  constructor(private attendanceService: AttendanceService){
+  constructor(private attendanceService: AttendanceService, public router: Router){
   
   }
 
@@ -65,6 +68,7 @@ export class AddStudentComponent {
       (result)=>{
         console.log(result);
         alert("Student Added Successfully!");
+        this.router.navigate(['/students']);
       },
       (error)=>{
         console.log(error);
@@ -72,6 +76,25 @@ export class AddStudentComponent {
       }
     )
 
+  }
+
+  private imageSrc: string = '';
+
+  handleInputChange(e: any) {
+    var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
+    var pattern = /image-*/;
+    var reader = new FileReader();
+    if (!file.type.match(pattern)) {
+      alert('invalid format');
+      return;
+    }
+    reader.onload = this._handleReaderLoaded.bind(this);
+    reader.readAsDataURL(file);
+  }
+  _handleReaderLoaded(e: any) {
+    let reader = e.target;
+    this.imageSrc = reader.result;
+    this.saveImage({_imageAsDataUrl: this.imageSrc});
   }
 
 }

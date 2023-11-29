@@ -6,14 +6,22 @@
   <div class="form-row">
     <div class="col-md-4 mb-3">
       <label for="validationCustom01">Name</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" formControlName="name" required>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="Full Name" value="Mark" formControlName="name" required>
       <div class="valid-feedback">
         Looks good!
       </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="validationCustom02">Roll No</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Roll NO" value="016888079" formControlName="rollNo" required>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Roll No"  formControlName="rollNo" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Email</label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="email"  formControlName="email" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -26,6 +34,28 @@
           Looks good!
         </div>
     </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Term: </label>
+
+      <select class="form-select" aria-label="Default select example"
+          formControlName="batch">
+          <option selected>Select</option>
+          <!-- <ng-container *ngFor="let professor of professors"> -->
+              <option [ngValue]="'Spring 2023'" value="'Spring 2023'">
+                  Spring 2023
+              </option>
+              <option [ngValue]="'Fall 2024'" value="'Fall 2024'">
+                  Fall 2024
+              </option>
+              <option [ngValue]="'Spring 2024'" value="'Spring 2024'">
+                  Spring 2024
+              </option>
+          <!-- </ng-container> -->
+      </select>
+
+  </div>
+    
 
     <!-- <div class="col-md-4 mb-3">
         <label for="validationCustom02">DOB</label>
@@ -89,14 +119,27 @@
   </div> 
 </div >  -->
 
+<table>
+  <tr style="vertical-align: sub;">
+    <td>
+      <app-camera-popup (imageClear)="clearImage()" (imageSave)="saveImage($event)" [heading]="'Register FaceId'"> 
+      </app-camera-popup>
+    </td>
+    <td>OR</td>
+    <td>
+      <div>
+        <!-- <label for="formFile" class="form-label">Default file input example</label> -->
+        <input class="form-control p-2 m-2" type="file" accept="image/*" id="formFile" (input)="handleInputChange($event)">
+      </div>
+    </td>
+  </tr>
+</table>
 
-<app-camera-popup (imageClear)="clearImage()" (imageSave)="saveImage($event)" [heading]="'Register FaceId'"> 
 
-</app-camera-popup>
 
 <div>
     <button class="btn btn-light p-2 m-2" type="submit">Clear</button>
-    <button class="btn btn-primary p-2 m-2" type="submit">Submit</button>
+    <button class="btn btn-primary p-2 m-2" style="background-color: var(--main-color) !important; color: white" type="submit">Submit</button>
 </div>
   
 </form>

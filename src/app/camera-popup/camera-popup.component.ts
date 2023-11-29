@@ -49,6 +49,8 @@ export class CameraPopupComponent {
   saveImage(){
     this.openCameraPopup = false;
     this.imageSave.emit(this.webcamImage);
+    this.webcamImage = null;
+    this.imageTaken = false;
   }
 
   retry() {
