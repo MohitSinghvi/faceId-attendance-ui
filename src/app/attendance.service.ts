@@ -8,8 +8,8 @@ export class AttendanceService {
 
   
 
-  baseUrl = "http://localhost:8000/";
-  // baseUrl = "http://localhost:8000/";
+  // baseUrl = "http://23.22.247.75:8000/";
+  baseUrl = "http://faceid-load-balancer-2144069326.us-east-1.elb.amazonaws.com/";
   constructor(public httpClient: HttpClient) {
 
   }
