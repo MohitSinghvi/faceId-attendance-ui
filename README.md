@@ -6,9 +6,9 @@ For Backend refer: <a href = "https://github.com/MohitSinghvi/faceId-attendance-
 
 **Project Name**: Facial Recognition based attendance management system. <a href = "http://mohitsinghvi.com/">mohitsinghvi.com</a>
 
-**UNIVERSITY:** http://www.sjsu.edu/
+**University:** http://www.sjsu.edu/
 
-**COURSE:** CMPE 281- Cloud Technologies
+**Course:** CMPE 281- Cloud Technologies
 
 **Professor:** Sanjay Garje <a href="https://www.linkedin.com/in/sanjaygarje/">LinkedIn</a>
 
