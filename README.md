@@ -30,7 +30,7 @@ The Attendance data of all the sessions of the courses will be available to the 
 This uses facial recognition technology backed by Amazon Rekognition API.
 The Project Architecture is built entirely on AWS and deployed on AWS cloud.
 
-**Features**
+# Features
 
 Admin:
 Add Student page - Student Info - name, roll no, major, term, photo.
@@ -50,52 +50,59 @@ Attendance dashboard for all the courses enrolled.
 <img width="613" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/c0a1cdef-25db-4c1c-82b3-cf9f4dcdfc18">
 <br>
 
-**Authentication Flow:**
+# Authentication Flow:
 
 <br>
 <img width="365" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/7ad1ff85-87d0-4833-b943-7909e63063ff">
 <br>
 
-**Attendance Flow:**
+# Attendance Flow:
 
 <br>
 <img width="489" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/e5a028cc-73f5-4f62-bad7-3824f7e95fed">
 <br>
 
-**Project Architecture** <br>
+# Project Architecture <br>
 
 ![image](https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/62c197ce-86f7-4bdf-8787-7eb075e36b12)
 
 
-**Demo Screenshots:**<br>
+# Demo Screenshots: <br>
 
 Student Registration Page:<br>
+
 <img width="439" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/45a990a4-9968-4074-b2da-ebf201c26525">
 <br>
 
 Add Professor page:<br>
+
 <img width="267" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/3f0db4b5-c1e9-40f0-a195-8fb8a3973c4d">
 <br>
 
 Add Course Page:<br>
+
 <img width="258" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/1e822e63-f272-4de8-80fd-e568121c6897">
 <br>
 
 Marking Attendance:<br>
+
 <img width="612" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/8e7e0a2f-12a1-468d-9fc8-9e32593002d1">
 <br>
 
 Attendance for the ongoing course shown as:<br>
+
 <img width="697" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/8bb522e1-9eca-4109-9817-f83fb6b4c597">
 <br>
 
 Session-wise attendance data shown as:<br>
+
 <img width="423" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/bdedbb6f-2238-45cf-8cf2-e0d13b7a0c77"><br>
 
 Attendance analytics shown as: <br>
+
 <img width="474" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/4d3d314f-aebd-41b0-9a5c-5847fc1596e5"><br>
 
-**Pre Requisite Configurations:**
+# Pre Requisite Configurations:
 
 Configure and setup the following Services of Amazon AWS by creating an account at https://aws.amazon.com/ and then setting up:
 
@@ -137,12 +144,13 @@ Backend:
 4. To start the server, in the root directory, open terminal and run: node index.js
 5. The server will start at port 3000
 
+# Links:
 Hosted at: http://mohitsinghvi.com/
 
 Demo Recording:  https://drive.google.com/file/d/1m_XLIED0klvWmQNiVhSXKy174bQBtaUx/view?usp=sharing
 
 
-
+# Misc
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
 
