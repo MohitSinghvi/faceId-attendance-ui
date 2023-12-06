@@ -1,6 +1,7 @@
 # FaceIdAttendance
 
-NOTE: This is the user interface implementation of the application. For Backend refer: <a href = "https://github.com/MohitSinghvi/faceId-attendance-backend">https://github.com/MohitSinghvi/faceId-attendance-backend<a>
+NOTE: This is the user interface implementation repository of the application. <br>
+For Backend refer: <a href = "https://github.com/MohitSinghvi/faceId-attendance-backend">https://github.com/MohitSinghvi/faceId-attendance-backend<a>
 
 
 **Project Name**: Facial Recognition based attendance management system. <a href = "http://mohitsinghvi.com/">mohitsinghvi.com</a>
@@ -9,12 +10,12 @@ NOTE: This is the user interface implementation of the application. For Backend 
 
 **COURSE:** CMPE 281- Cloud Technologies
 
-**Professor:** Sanjay Garje
+**Professor:** Sanjay Garje <a href="https://www.linkedin.com/in/sanjaygarje/">LinkedIn</a>
 
 **Project Members:**
 
-Mohit Mahendra Singhvi: https://www.linkedin.com/in/imohitsinghvi/<br>
-Kushal Vema Sai: https://www.linkedin.com/in/kushal-sai-3096vks/<br>
+Mohit Mahendra Singhvi: <a href="https://www.linkedin.com/in/imohitsinghvi/">LinkedIn</a> <br>
+Kushal Vema Sai: <a href="https://www.linkedin.com/in/kushal-sai-3096vks/">LinkedIn</a><br>
 Mohaimin Iqbal Gazi<br>
 Manikanta Nynala
 
