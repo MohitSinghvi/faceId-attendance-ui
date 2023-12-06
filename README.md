@@ -1,6 +1,6 @@
 # FaceIdAttendance
 
-NOTE: This is the user iterface implementation of the application. For Backend refer: <a href = "https://github.com/MohitSinghvi/faceId-attendance-backend">https://github.com/MohitSinghvi/faceId-attendance-backend<a>
+NOTE: This is the user interface implementation of the application. For Backend refer: <a href = "https://github.com/MohitSinghvi/faceId-attendance-backend">https://github.com/MohitSinghvi/faceId-attendance-backend<a>
 
 
 **Project Name**: Facial Recognition based attendance management system. <a href = "http://mohitsinghvi.com/">mohitsinghvi.com</a>
