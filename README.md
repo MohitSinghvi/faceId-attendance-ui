@@ -1,4 +1,4 @@
-# FaceIdAttendance
+# Facial Recogniton Based Attendance Management System
 
 NOTE: This is the user interface implementation repository of the application. <br>
 For Backend refer: <a href = "https://github.com/MohitSinghvi/faceId-attendance-backend">https://github.com/MohitSinghvi/faceId-attendance-backend<a>
