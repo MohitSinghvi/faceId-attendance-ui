@@ -13,9 +13,9 @@ NOTE: This is the user iterface implementation of the application. For Backend r
 
 **Project Members:**
 
-Mohit Mahendra Singhvi: https://www.linkedin.com/in/imohitsinghvi/
-Kushal Vema Sai: https://www.linkedin.com/in/kushal-sai-3096vks/
-Mohaimin Iqbal Gazi
+Mohit Mahendra Singhvi: https://www.linkedin.com/in/imohitsinghvi/<br>
+Kushal Vema Sai: https://www.linkedin.com/in/kushal-sai-3096vks/<br>
+Mohaimin Iqbal Gazi<br>
 Manikanta Nynala
 
 **Problem Statement:**
@@ -44,41 +44,55 @@ Attendance dashboard course, session, and student wise.
 Students: 
 Attendance dashboard for all the courses enrolled.
 
-**Application Flow**
+**Application Flow:**<br>
 
 <img width="613" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/c0a1cdef-25db-4c1c-82b3-cf9f4dcdfc18">
+<br>
 
-**Authentication Flow**
+**Authentication Flow:**
 
+<br>
 <img width="365" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/7ad1ff85-87d0-4833-b943-7909e63063ff">
+<br>
 
-**Attendance Flow**
+**Attendance Flow:**
 
+<br>
 <img width="489" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/e5a028cc-73f5-4f62-bad7-3824f7e95fed">
+<br>
 
-**Project Architecture**
+**Project Architecture** <br>
+
+![image](https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/62c197ce-86f7-4bdf-8787-7eb075e36b12)
 
 
-**Demo Screenshots**
+**Demo Screenshots:**<br>
 
-Student Registration Page:
+Student Registration Page:<br>
 <img width="439" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/45a990a4-9968-4074-b2da-ebf201c26525">
+<br>
 
-Add Professor page:
+Add Professor page:<br>
 <img width="267" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/3f0db4b5-c1e9-40f0-a195-8fb8a3973c4d">
+<br>
 
-Add Course Page:
+Add Course Page:<br>
 <img width="258" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/1e822e63-f272-4de8-80fd-e568121c6897">
+<br>
 
-Marking Attendance:
+Marking Attendance:<br>
 <img width="612" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/8e7e0a2f-12a1-468d-9fc8-9e32593002d1">
+<br>
 
-Attendance for the ongoing course shown as:
+Attendance for the ongoing course shown as:<br>
 <img width="697" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/8bb522e1-9eca-4109-9817-f83fb6b4c597">
+<br>
 
-Session-wise attendance data shown as:
-<img width="423" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/bdedbb6f-2238-45cf-8cf2-e0d13b7a0c77">
-<img width="474" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/4d3d314f-aebd-41b0-9a5c-5847fc1596e5">
+Session-wise attendance data shown as:<br>
+<img width="423" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/bdedbb6f-2238-45cf-8cf2-e0d13b7a0c77"><br>
+
+Attendance analytics shown as: <br>
+<img width="474" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/4d3d314f-aebd-41b0-9a5c-5847fc1596e5"><br>
 
 **Pre Requisite Configurations:**
 
@@ -123,6 +137,7 @@ Backend:
 5. The server will start at port 3000
 
 Hosted at: http://mohitsinghvi.com/
+
 Demo Recording:  https://drive.google.com/file/d/1m_XLIED0klvWmQNiVhSXKy174bQBtaUx/view?usp=sharing
 
 
