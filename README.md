@@ -16,8 +16,8 @@ For Backend refer: <a href = "https://github.com/MohitSinghvi/faceId-attendance-
 
 Mohit Mahendra Singhvi: <a href="https://www.linkedin.com/in/imohitsinghvi/">LinkedIn</a> <br>
 Kushal Vema Sai: <a href="https://www.linkedin.com/in/kushal-sai-3096vks/">LinkedIn</a><br>
-Mohaimin Iqbal Gazi<br>
-Manikanta Nynala
+Mohaimin Iqbal Gazi: <a href="https://bd.linkedin.com/in/gazi-mohaimin-iqbal-2b3b78161">LinkedIn</a><br>
+Manikanta Nynala: <a href="https://www.linkedin.com/in/manikanta-nynala-389631193">LinkedIn</a><br>
 
 **Problem Statement:**
 Traditional methods such as paper sign-in sheets and badge scanners, are time-consuming, inefficient, and prone to errors. 
@@ -45,7 +45,7 @@ Attendance dashboard course, session, and student wise.
 Students: 
 Attendance dashboard for all the courses enrolled.
 
-**Application Flow:**<br>
+**Application Flow:** <br>
 
 <img width="613" alt="image" src="https://github.com/MohitSinghvi/faceId-attendance-ui/assets/35193178/c0a1cdef-25db-4c1c-82b3-cf9f4dcdfc18">
 <br>
@@ -120,6 +120,7 @@ Configure and setup the following Services of Amazon AWS by creating an account 
 12. EC2
 
 List of required software to download locally:
+
 1. Node.js
 2. NPM
 3. Angular CLI
