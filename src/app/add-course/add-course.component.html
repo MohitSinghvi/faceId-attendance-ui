@@ -83,7 +83,7 @@ novalidate>
 
 
         <ng-container *ngFor="let student of students">
-            <div class="form-check">
+            <div class="form-check m-1 p-1">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" (change) = "addRemoveStudent($event, student.rollNo)">
                 <label class="form-check-label" for="flexCheckDefault">
                   {{student.rollNo}} - {{student.name}}

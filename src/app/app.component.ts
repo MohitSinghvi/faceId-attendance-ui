@@ -18,6 +18,9 @@ export class AppComponent implements OnInit{
         this.localStorage = localStorage;
         this.role = localStorage.getItem('role');
         this.userId = localStorage.getItem('userId');  
+        if(!this.userId) {
+            this.router.navigate(['/login']);
+        }
     }
 
     constructor(private attendanceService: AttendanceService, private router: Router){
